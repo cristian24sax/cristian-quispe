@@ -1,0 +1,40 @@
+.card {
+  width: 20rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: fit;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  padding: 1.25rem;
+  background: wheat;
+  border-bottom:8px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  font-size: 0.875rem;
+  color: #555;
+  height:95px;
+}
+
+.card-genre {
+  background: #212426;
+  color: white;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  padding: 4px;
+  display: inline;
+}

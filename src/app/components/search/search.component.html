@@ -1,0 +1,46 @@
+<section class="search">
+  <div class="search_box">
+    <div>
+      <label for="inputControl"></label>
+      <input
+        id="inputControl"
+        [(ngModel)]="fieldName"
+        type="text"
+        (keyup)="onQueryChanged()"
+        placeholder="Nombre de Pelicula"
+      />
+    </div>
+
+    <div>
+      <label for="inputControl"></label>
+      <input
+        id="inputControl"
+        [(ngModel)]="fieldDescription"
+        type="text"
+        (keyup)="onQueryChanged()"
+        placeholder="Descripción de pelicula"
+      />
+    </div>
+    <div>
+      <div>
+        <select [(ngModel)]="selectedItem" (change)="addElement()">
+          <option value="" disabled selected>Genero</option>
+          <option *ngFor="let item of genres" [ngValue]="item">
+            {{ item }}
+          </option>
+        </select>
+      </div>
+      <div *ngIf="itemsSelected.length > 0">
+        <div class="search_list">
+          <div *ngFor="let selectedItem of itemsSelected; let i = index">
+            <button (click)="deleteElement(i)">
+              {{ selectedItem }}
+              <img src="../../../assets/icons/delete.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <button (click)="getMovie()">Buscar</button> -->
+</section>

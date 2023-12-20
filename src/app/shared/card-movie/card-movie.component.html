@@ -1,0 +1,11 @@
+<section class="card">
+  <img [src]="movie.image" class="card-img-top" [alt]="movie.title" />
+  <div class="card-body">
+    <h5 class="card-title">{{ movie.title }}</h5>
+    <p class="card-text">{{ movie.description }}</p>
+    <p class="card-genre">{{ movie.genre }}</p>
+    <!-- <div *ngFor="let genre of movie.genre">
+      {{ genre }}
+    </div> -->
+  </div>
+</section>

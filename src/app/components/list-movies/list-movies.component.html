@@ -1,0 +1,9 @@
+<section class="container">
+  <section *ngFor="let movie of filteredMovies">
+    <app-card-movie [movie]="movie"></app-card-movie>
+  </section>
+
+  <div *ngIf="filteredMovies!.length == 0" class="empty">
+    <h3>No se encontraron peliculas</h3>
+  </div>
+</section>
